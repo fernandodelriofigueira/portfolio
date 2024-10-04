@@ -1,0 +1,32 @@
+---
+//import LinkInline from "./LinkInline.astro"
+
+interface Props {
+  edTitle: string
+  edCenter: string
+  edLocation: string
+  edDescription: string
+  edDate: string
+}
+
+const { edTitle, edCenter, edLocation, edDescription, edDate } = Astro.props
+---
+
+<div
+  class="relative mx-12 pb-12 grid md:grid-cols-5 md:gap-10 md:space-x-4]"
+>
+  <div class="relative pb-12 md:col-span-2">
+    <div class="top-0">
+      
+
+      <h3 class="text-xl font-bold text-yellow-400">{edTitle}</h3>
+      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{edCenter}</h4>
+      <h5 class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{edLocation}</h5>
+      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{edDate}</time>
+    </div>
+  </div>
+  <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+    {edDescription}
+  
+  </div>
+</div>

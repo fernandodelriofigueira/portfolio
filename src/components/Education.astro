@@ -1,0 +1,31 @@
+---
+import EducationItem from "./EducationItem.astro"
+const EDUCATION = [
+  {
+    edDate: "Jul 2024 - Sep 2024",
+    edTitle: "Bootcamp en desarrollo Full-Stack",
+    edCenter: "Upgrade Hub",
+    edLocation: "Madrid, España",
+    edDescription:
+      "Curso intensivo en la edición de verano. Experiencia teórica y práctica sobre Git y Github, HTML y CSS, Javascript, React, Angular, MongoDB, SQL, metodologías ágiles, NodeJS, Bootstrap, PHP y Symfony.",
+  },
+  {
+    edDate: "Sep 2019 - May 2023",
+    edTitle: "Grado en Diseño Gráfico Multimedia",
+    edCenter: "EASD Ramón Falcón",
+    edLocation: "Lugo, España",
+    edDescription:
+      "Grado en diseño gráfico. Ejecución fluida de proyectos en materia de branding, diseño editorial, ilustración, diseño web, tipografía y técnicas audiovisuales y de animación. Especialización en diseño UX/UI.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EDUCATION.map((education) => (
+      <li class="">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>

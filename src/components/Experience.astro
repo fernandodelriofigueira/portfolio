@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Jul 2023 - Jun 2024",
+    title: "UX/UI Designer",
+    company: "Telefónica S.A.",
+    description:
+      "Beca Talentum en diseño UX/UI. Diseño de aplicaciones dentro del área de People. Elaboración de un sistema de diseño para optimizar la creación de productos digitales. Prototipado. Investigación y pruebas con usuarios. Gestión de los espacios de trabajo en Figma.",
+  },
+  {
+    date: "Feb 2023 - Abr 2023",
+    title: "Product Designer",
+    company: "Rebase T.N.",
+    description:
+      "Prácticas de empresa en Diseño Web. Elaboración de flujos de navegación. Prototipado en Adobe XD. Estudio de la interacción entre usuario y producto digital.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
