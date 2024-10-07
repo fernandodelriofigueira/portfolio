@@ -7,5 +7,6 @@ import robotsTxt from "astro-robots-txt"
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: 'https://fernandodelriofigueira.github.io',
-  base: 'portfolio'
+  base: 'portfolio',
+  trailingSlash: "never"
 })
