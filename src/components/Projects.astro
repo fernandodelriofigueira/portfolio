@@ -21,7 +21,7 @@ const PROJECTS = [
     title: "SVGL - A beautiful library with SVG logos",
     description:
       "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "/project",
+    link: `${import.meta.env.BASE_URL}/project`,
     image: `${import.meta.env.BASE_URL}/moodle.png`,
     tags: [TAGS.UXUI, TAGS.DEVELOPMENT],
   },
@@ -29,7 +29,7 @@ const PROJECTS = [
     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
     description:
       "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "/project",
+    link: `${import.meta.env.BASE_URL}/project`,
     image: `${import.meta.env.BASE_URL}/moodle.png`,
     tags: [TAGS.UXUI, TAGS.DEVELOPMENT],
   },
@@ -41,7 +41,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
             <img
               alt={title}
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"

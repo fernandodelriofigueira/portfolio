@@ -5,6 +5,7 @@ import AboutMe from "@/components/AboutMe.astro";
 import Briefcase from "@/components/icons/Briefcase.astro";
 import Backpack from "@/components/icons/Backpack.astro";
 import Rocket from "@/components/icons/Rocket.astro";
+import CV from "@/components/CV.astro";
 import Experience from "@/components/Experience.astro";
 import Education from "@/components/Education.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
@@ -24,19 +25,19 @@ import TitleSection from "@/components/TitleSection.astro";
     </SectionContainer>
   </main>
   <div class="space-y-24">
-    <SectionContainer id="experiencia">
+    <SectionContainer id="experiencia y educacion">
       <TitleSection>
         <Briefcase class="size-8" />
         Experiencia laboral
       </TitleSection>
       <Experience />
-    </SectionContainer>
-    <SectionContainer id="educacion">
+
       <TitleSection>
         <Backpack class="size-8" />
         Educación
       </TitleSection>
       <Education />
+      <CV />
     </SectionContainer>
 
     <SectionContainer id="proyectos">

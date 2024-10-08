@@ -1,0 +1,22 @@
+---
+import LinkButton from "./LinkButton.astro";
+import CVIcon from "./icons/CVIcon.astro";
+---
+
+<div class="max-w-xl mx-12">
+  <p
+    class="mt-6 mb-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 dark:[&>strong2]:text-green-500 [&>strong2]:text-green-500 [&>strong2]:font-semibold dark:text-gray-300"
+  >
+    ¿Quieres saber más sobre mis <em class="italic">hard skills</em> en <strong
+      >diseño</strong
+    > y <strong2> desarrollo</strong2>
+    ? Puedes descargar mi currículum en el siguiente botón.
+  </p>
+  <LinkButton
+    href=`${import.meta.env.BASE_URL}/FernandodelRíoFigueira_CV2024.pdf`
+    download=`${import.meta.env.BASE_URL}/FernandodelRíoFigueira_CV2024.pdf`
+  >
+    <CVIcon class="size-4" />
+    Descargar
+  </LinkButton>
+</div>
