@@ -1,6 +1,8 @@
 ---
-import UXUI from "../icons/UXUI.astro";
-import Development from "../icons/Development.astro";
+import UXUI from "../components/icons/UXUI.astro";
+import Development from "../components/icons/Development.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import TitleSection from "@/components/TitleSection.astro";
 
 const TAGS = {
   UXUI: {
@@ -23,7 +25,7 @@ const PROJECT = [
     link: `${import.meta.env.BASE_URL}/project`,
     coverimage: `${import.meta.env.BASE_URL}/moodle.png`,
     image1: `${import.meta.env.BASE_URL}/moodle.png`,
-    tags: [TAGS.UXUI, TAGS.DEVELOPMENT],
+    tags: [TAGS.UXUI],
   },
 ];
 ---
