@@ -1,0 +1,28 @@
+---
+const PROJECT = [
+  {
+    title: "Moodle 2.0 - e-Learning redefinido",
+    description:
+      "Rediseño del concepto de Moodle estableciendo una interfaz más fresca y una experiencia más agradable.",
+    link: `${import.meta.env.BASE_URL}/project`,
+    coverimage: `${import.meta.env.BASE_URL}/moodle.png`,
+    image1: `${import.meta.env.BASE_URL}/moodle.png`,
+    image2: `${import.meta.env.BASE_URL}/moodle.png`,
+    image3: `${import.meta.env.BASE_URL}/moodle.png`,
+    context: "bla bla bla",
+    problem:
+      "Moodle, a pesar de ser una de las plataformas de e-learning más populares, presenta serios problemas de usabilidad. Su interfaz tradicionalmente ha sido percibida como compleja y poco intuitiva, especialmente cuando se utiliza en dispositivos móviles. Los usuarios suelen encontrarse con una experiencia de navegación difícil, fragmentada y, en muchos casos, confusa, lo que afecta tanto a estudiantes como a profesores. Este tipo de fricciones limita la adopción por parte de centros educativos y profesionales, quienes necesitan una plataforma más accesible y amigable. Con la creciente demanda de educación a distancia, surge la necesidad de una renovación total que transforme Moodle en una app moderna, funcional y adaptable a las necesidades actuales de enseñanza.",
+    solution:
+      "Para resolver estos problemas, se diseñó Moodle 2.0, una nueva aplicación de e-learning enfocada en la simplicidad, usabilidad y accesibilidad. Siguiendo una estrategia de mobile-first, se priorizó la experiencia en dispositivos móviles para garantizar una navegación fluida y amigable, y se desarrolló un diseño escalable que se adapta perfectamente a cualquier pantalla. A través de un proceso de investigación centrada en el usuario, se realizaron entrevistas con estudiantes y docentes, análisis de las interacciones y testeos de prototipos, lo que permitió identificar los puntos de dolor principales y abordarlos de manera eficiente.El proyecto incluyó una fase de definición de user personas y user journeys, seguida de la creación de wireframes y prototipos interactivos. El enfoque UX/UI no solo simplificó la experiencia, sino que también hizo la plataforma más intuitiva y accesible, eliminando los obstáculos comunes de navegación. El resultado es una app más moderna y funcional, que logra satisfacer las necesidades de los centros de enseñanza y los usuarios, facilitando el aprendizaje y la gestión de los cursos de manera eficiente y agradable.",
+    process: "",
+  },
+];
+
+const project = PROJECT[0];
+---
+
+<div
+  class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+>
+  {project.problem}
+</div>

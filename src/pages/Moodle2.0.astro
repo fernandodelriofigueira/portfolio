@@ -1,71 +1,61 @@
 ---
-import UXUI from "../components/icons/UXUI.astro";
-import Development from "../components/icons/Development.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import AboutMe from "@/components/AboutMe.astro";
+import Backpack from "@/components/icons/Backpack.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Education from "@/components/Education.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import TitleSection from "@/components/TitleSection.astro";
-
-const TAGS = {
-  UXUI: {
-    name: "UX/UI",
-    class: "bg-yellow-500 text-white",
-    icon: UXUI,
-  },
-  DEVELOPMENT: {
-    name: "Development",
-    class: "bg-green-500 text-white",
-    icon: Development,
-  },
-};
+import ProjectHeading from "@/components/Project/projectHeading.astro";
+import ProjectContext from "@/components/Project/projectContext.astro";
+import ProjectProblem from "@/components/Project/projectProblem.astro";
+import ProjectSolution from "@/components/Project/projectSolution.astro";
 
 const PROJECT = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Moodle 2.0 - e-Learning redefinido",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "Rediseño del concepto de Moodle estableciendo una interfaz más fresca y una experiencia más agradable.",
     link: `${import.meta.env.BASE_URL}/project`,
     coverimage: `${import.meta.env.BASE_URL}/moodle.png`,
     image1: `${import.meta.env.BASE_URL}/moodle.png`,
-    tags: [TAGS.UXUI],
+    image2: `${import.meta.env.BASE_URL}/moodle.png`,
+    image3: `${import.meta.env.BASE_URL}/moodle.png`,
+    context: "bla bla bla",
+    problem: "",
+    solution: "",
+    process: "",
   },
 ];
 ---
 
-{
-  PROJECT.map(({ coverimage, title, description, tags }) => (
-    <div class="w-full">
-      <div class="max-w-xl">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
-          {title}
-        </h1>
-      </div>
-      <div class="w-full">
-        <div class="relative flex mt-5 w-full h-80 flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
-          <img
-            alt={title}
-            class="object-cover object-center w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-            loading="lazy"
-            src={coverimage}
-          />
-        </div>
-        <div class="flex flex-wrap mt-6">
-          <ul class="flex flex-row mb-2 gap-x-2">
-            {tags.map((tag) => (
-              <li>
-                <span
-                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                >
-                  <tag.icon class="size-4" />
-                  {tag.name}
-                </span>
-              </li>
-            ))}
-          </ul>
+<Layout
+  title="Fernando del Río Figueira - Portfolio"
+  description="Fernando del Río Figueira. Diseñador UX/UI y Desarrollador Full-Stack"
+>
+  <main class="px-4">
+    <div class="space-y-24 py-16 md:py-36">
+      <SectionContainer id="Moodle 2.0">
+        <ProjectHeading />
+      </SectionContainer>
 
-          <div class="mt-6 text-xl text-gray-700 dark:text-gray-400">
-            {description}
-          </div>
-        </div>
-      </div>
+      <SectionContainer id="contexto">
+        <TitleSection> Contexto </TitleSection>
+        <ProjectContext />
+      </SectionContainer>
+
+      <SectionContainer id="problema">
+        <TitleSection> Problema </TitleSection>
+        <ProjectProblem />
+      </SectionContainer>
+
+      <SectionContainer id="solucion">
+        <TitleSection> Solución </TitleSection>
+        <ProjectSolution />
+      </SectionContainer>
     </div>
-  ))
-}
+  </main>
+</Layout>
