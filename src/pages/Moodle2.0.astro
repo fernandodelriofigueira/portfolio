@@ -13,6 +13,8 @@ import ProjectHeading from "@/components/Project/projectHeading.astro";
 import ProjectContext from "@/components/Project/projectContext.astro";
 import ProjectProblem from "@/components/Project/projectProblem.astro";
 import ProjectSolution from "@/components/Project/projectSolution.astro";
+import PlainText from "@/components/Project/plainText.astro";
+import LargeQuote from "@/components/Project/largeQuote.astro";
 
 const PROJECT = [
   {
@@ -56,6 +58,13 @@ const PROJECT = [
         <TitleSection> Solución </TitleSection>
         <ProjectSolution />
       </SectionContainer>
+      <PlainText>
+        <p>Hola</p>
+      </PlainText>
+
+      <LargeQuote>
+        <p>Hola</p>
+      </LargeQuote>
     </div>
   </main>
 </Layout>
