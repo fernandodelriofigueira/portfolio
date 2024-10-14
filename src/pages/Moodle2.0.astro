@@ -6,6 +6,8 @@ import TitleSection from "@/components/TitleSection.astro";
 import ProjectHeading from "@/components/project/projectHeading.astro";
 import PlainText from "@/components/project/plainText.astro";
 import LargeQuote from "@/components/project/largeQuote.astro";
+import TextHeading from "@/components/Project/textHeading.astro";
+import LinkInline from "@/components/LinkInline.astro";
 ---
 
 <Layout
@@ -159,6 +161,51 @@ import LargeQuote from "@/components/project/largeQuote.astro";
             cambiar la estructura general de la aplicación.
           </p>
         </PlainText>
+      </SectionContainer>
+      <SectionContainer>
+        <TitleSection> Prototipado y testeo </TitleSection>
+        <PlainText>
+          <p>
+            Este proyecto finaliza con la elaboración de un prototipo basado en
+            todo el estudio previo. En el caso de este proyecto, la fase de
+            prototipado se realizó utilizando Adobe XD. En esta última etapa,
+            creé las plantillas para toda la aplicación y definí los componentes
+            que se ubicarían en cada una de las pantallas, dando forma al
+            prototipo de alta fidelidad en sus dos versiones <em class="italic"
+              >mobile</em
+            > y <em class="italic">desktop</em>.
+          </p>
+        </PlainText>
+        <div
+          class="relative flex mt-5 w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+        >
+          <!-- <video
+            class="w-3/10 h-400 object-cover"
+            src="moodle2.0/VideoPrototipoMobile.mp4"
+            autoplay
+            loop
+            muted></video> -->
+          <video
+            class="w-7/10 h-400 object-cover"
+            src="moodle2.0/VideoPrototipoDesktop.mp4"
+            autoplay
+            loop
+            muted></video>
+        </div>
+      </SectionContainer>
+      <SectionContainer>
+        <TextHeading>
+          <p>
+            Si quieres saber más sobre este proyecto, puedes ponerte en contacto
+            conmigo via <LinkInline href="mailto:f.delrio.figueira@gmail.com"
+              >mail</LinkInline
+            > o <LinkInline
+              class="text-orange-500"
+              href="https://www.linkedin.com/in/fernandodelriofigueira/"
+              >LinkedIn</LinkInline
+            >. Estaré encantado de responder a todas las preguntas.
+          </p>
+        </TextHeading>
       </SectionContainer>
     </div>
   </main>
