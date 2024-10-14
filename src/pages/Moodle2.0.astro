@@ -1,20 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 
-import AboutMe from "@/components/AboutMe.astro";
-import Backpack from "@/components/icons/Backpack.astro";
-import CodeIcon from "@/components/icons/Code.astro";
-import Education from "@/components/Education.astro";
-import ProfileCheck from "@/components/icons/ProfileCheck.astro";
-import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import TitleSection from "@/components/TitleSection.astro";
 import ProjectHeading from "@/components/project/projectHeading.astro";
-import ProjectContext from "@/components/project/projectContext.astro";
-import ProjectProblem from "@/components/project/projectProblem.astro";
-import ProjectSolution from "@/components/project/projectSolution.astro";
 import PlainText from "@/components/project/plainText.astro";
 import LargeQuote from "@/components/project/largeQuote.astro";
+import PlainText from "@/components/project/plainText.astro";
 
 const PROJECT = [
   {
@@ -46,25 +38,146 @@ const PROJECT = [
 
       <SectionContainer id="contexto">
         <TitleSection> Contexto </TitleSection>
-        <ProjectContext />
+        <PlainText>
+          <p>
+            Este proyecto fue creado como <strong
+              >Trabajo de Fin de Grado</strong
+            > para mis estudios en Diseño Gráfico en 2023. Tenía claro que quería
+            formular una solución para un problema real. De ahí surgió Moodle 2.0,
+            un proyecto que permitiría entender el producto digital de esta empresa
+            como una app de e-Learning al uso.
+          </p>
+        </PlainText>
       </SectionContainer>
 
       <SectionContainer id="problema">
         <TitleSection> Problema </TitleSection>
-        <ProjectProblem />
+        <PlainText>
+          <p>
+            Moodle, a pesar de ser una de las plataformas de e-learning más
+            populares, presenta serios <strong>problemas de usabilidad</strong>.
+            Su interfaz tradicionalmente ha sido percibida como <strong
+              >compleja y poco intuitiva</strong
+            >, especialmente cuando se utiliza en dispositivos móviles. Los
+            usuarios suelen encontrarse con una experiencia de navegación
+            difícil, fragmentada y, en muchos casos, confusa, lo que afecta
+            tanto a estudiantes como a profesores. Este tipo de fricciones
+            limita su adopción por parte de los centros educativos, quienes
+            necesitan una plataforma más accesible y amigable. Con la creciente
+            demanda de educación a distancia, surge la necesidad de una
+            renovación total que transforme Moodle en una app <strong
+              >moderna, funcional y adaptable</strong
+            > a las necesidades actuales de enseñanza.
+          </p>
+        </PlainText>
       </SectionContainer>
 
-      <SectionContainer id="solucion">
-        <TitleSection> Solución </TitleSection>
-        <ProjectSolution />
+      <SectionContainer id="proscontras">
+        <TitleSection> Identificar pros y contras </TitleSection>
+        <PlainText>
+          <p>
+            El primer paso de este proyecto fue identificar los puntos débiles
+            de la interfaz y del flujo en la interacción de los usuarios con el
+            producto. En este punto de la investigación encontré un punto
+            interesante: Su <strong>capacidad de personalización. </strong>Me
+            llamó la atención la cantidad de capas estéticas que se podían
+            añadir a su interfaz.
+          </p>
+          <p>
+            Tras buscar soluciones para este aspecto, la decisión final fue
+            obviar esta funcionalidad, con el fin de ofrecer un producto
+            estéticamente agradable y a la vez actualizado y eficiente, primando
+            ante todo una interacción ágil y fluida.
+          </p>
+        </PlainText>
       </SectionContainer>
-      <PlainText>
-        <p>Hola</p>
-      </PlainText>
 
-      <LargeQuote>
-        <p>Hola</p>
-      </LargeQuote>
+      <SectionContainer id="proscontras">
+        <TitleSection> User persona </TitleSection>
+        <div class="flex-wrap">
+          <PlainText>
+            <p class="w-full">
+              Teniendo en cuenta que se trata de una aplicación de e-learning,
+              se definió como público objetivo el alumnado en general, haciendo
+              foco en los que cursan <strong>estudios superiores</strong>, ya
+              que son los que, por norma general, tienen proyectos y entregas
+              más complejos.
+            </p>
+          </PlainText>
+          <div
+            class="relative flex mt-5 w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+          >
+            <img
+              alt="user persona"
+              class="object-contain object-center w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src="/moodle2.0/UserPersona_Moodle.png"
+            />
+          </div>
+        </div>
+      </SectionContainer>
+      <SectionContainer>
+        <TitleSection> Arquitectura de la Información </TitleSection>
+        <div class="flex content-center">
+          <PlainText>
+            <p class="w-3/10">
+              A la hora de definir los flujos de navegación por parte del
+              usuario se diseñó un esquema para organizar los diferentes menús y
+              comprobar que estos mantienen una estructura lógica
+            </p>
+          </PlainText>
+          <div
+            class="relative flex mt-5 w-7/10 h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+          >
+            <img
+              alt="Esquema de arquitectura de la información"
+              class="object-contain object-center w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src="/moodle2.0/AI_Moodle2.jpg"
+            />
+          </div>
+        </div>
+      </SectionContainer>
+      <LargeQuote />
+      <SectionContainer>
+        <TitleSection> Wireframes </TitleSection>
+        <PlainText>
+          <p class="w-full">
+            A la hora de definir el <em class="italic">layout</em> de la aplicación,
+            seguí el enfoque de <strong
+              ><em class="italic">Mobile First</em></strong
+            >, definiendo en un primer lugar la distribución de los componentes
+            en los dispositivos de menor tamaño, permitiendo optimizar el
+            espacio en las pantallas más reducidas.
+          </p>
+        </PlainText>
+        <div
+          class="relative flex mt-5 w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+        >
+          <img
+            alt="Muestra de los wireframes de la aplicación"
+            class="object-contain object-center w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+            loading="lazy"
+            src="/moodle2.0/Esquemas_Moodle.jpg"
+          />
+        </div>
+        <PlainText>
+          <p>
+            Una vez definida la versión móvil en columna, pasé a escalar el
+            diseño para pantallas de mayor tamaño o <em class="italic"
+              >Desktop</em
+            >. En este caso, se redistribuyeron los componentes en columna de la
+            versión mobile, manteniendo el lenguaje gráfico pero ampliando
+            márgenes y tamaños tipográficos. Para la versión de escritorio opté
+            por agrupar los elementos en tres módulos: uno central con el
+            contenido más importante y dos laterales, que contienen la
+            información secundaria y algunos accesos directos. Esta distribución
+            permite crear un produto escalable, puesto que con su diseño
+            modular, se pueden añadir componentes en base a las necesidades sin
+            cambiar la estructura general de la aplicación.
+          </p>
+        </PlainText>
+      </SectionContainer>
     </div>
   </main>
 </Layout>
