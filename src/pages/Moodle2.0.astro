@@ -102,16 +102,9 @@ import LinkInline from "@/components/LinkInline.astro";
       </SectionContainer>
       <SectionContainer>
         <TitleSection> Arquitectura de la Información </TitleSection>
-        <div class="flex content-center">
-          <PlainText>
-            <p class="w-3/10">
-              A la hora de definir los flujos de navegación por parte del
-              usuario se diseñó un esquema para organizar los diferentes menús y
-              comprobar que estos mantienen una estructura lógica
-            </p>
-          </PlainText>
+        <div class="flex-wrap content-center">
           <div
-            class="relative flex mt-5 w-7/10 h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+            class="relative flex mt-5 w-auto h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
           >
             <img
               alt="Esquema de arquitectura de la información"
@@ -120,9 +113,25 @@ import LinkInline from "@/components/LinkInline.astro";
               src="/moodle2.0/AI_Moodle2.jpg"
             />
           </div>
+          <PlainText>
+            <p>
+              A la hora de definir los flujos de navegación se diseñó un esquema
+              para organizar los diferentes menús y comprobar que estos
+              mantienen una estructura lógica.
+            </p>
+            <p>
+              Durante esta fase del proyecto tuve que prestar especial atención
+              a que la navegación fuese lo más rápida posible, ya que la
+              aplicación está destinada a ser usada durante cursos escolares, en
+              los que tanto el alumnado como el profesorado se encontrarían en
+              situaciones de estrés o tensión. Por este motivo, la cantidad de <em
+                class="italic">clicks</em
+              > para navegar por todo el producto debería no ser excesiva, aún coexistiendo
+              con una interfaz limpia y poco recargada.
+            </p>
+          </PlainText>
         </div>
       </SectionContainer>
-      <LargeQuote />
       <SectionContainer>
         <TitleSection> Wireframes </TitleSection>
         <PlainText>
