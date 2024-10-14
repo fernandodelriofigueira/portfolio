@@ -1,0 +1,35 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import SectionContainer from "@/components/SectionContainer.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import Crane from "@/components/icons/Crane.astro";
+---
+
+<Layout
+  title="Fernando del Río Figueira - Portfolio"
+  description="Fernando del Río Figueira. Diseñador UX/UI y Desarrollador Full-Stack"
+>
+  <main class="px-4">
+    <div class="space-y-24 py-16 md:py-36">
+      <SectionContainer id="Under construction">
+        <div class="h-80 flex-col justify-center content-center">
+          <div class="flex text-yellow-500 justify-center"><Crane /></div>
+          <h1 class="text-yellow-500 text-4xl mb-10 font-bold text-center">
+            ¡Wow! Me has pillado...
+          </h1>
+          <p class="text-lg text-center">
+            Esta página aún está en construcción, pero estará disponible muy
+            pronto.
+          </p>
+          <p class="text-lg text-center">
+            Puedes ver el resto del contenido desde la página de inicio.
+          </p>
+          <div class="text-center mt-6">
+            <LinkButton href="/">Volver</LinkButton>
+          </div>
+        </div>
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>
