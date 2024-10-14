@@ -29,7 +29,7 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex text-sm mx-3 font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex text-sm sm:text-xs mx-3 font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     <a
       href="https://fernandodelriofigueira.com"
@@ -43,7 +43,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-500"
+          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-500 whitespace-nowrap"
           aria-label={link.label}
           href={link.url}
         >
