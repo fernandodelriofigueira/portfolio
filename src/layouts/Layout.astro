@@ -12,6 +12,10 @@ interface Props {
 }
 
 const { description, title } = Astro.props;
+const { url } = Astro;
+const pathname = url.pathname;
+
+const isHomePage = pathname === "/";
 ---
 
 <!doctype html>
@@ -33,7 +37,8 @@ const { description, title } = Astro.props;
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(114,100,28,0.3),rgba(18,18,18,1))]"
     >
     </div>
-    <SecHeader />
+    {isHomePage ? <Header /> : <SecHeader />}
+
     <slot />
     <Footer />
     <style is:global>
