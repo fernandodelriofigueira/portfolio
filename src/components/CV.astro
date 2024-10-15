@@ -1,6 +1,7 @@
 ---
 import LinkButton from "./LinkButton.astro";
-import CVIcon from "./icons/CVIcon.astro";
+import FlagSP from "./icons/FlagSP.astro";
+import FlagUK from "./icons/FlagUK.astro";
 ---
 
 <div class="max-w-xl mx-12">
@@ -12,11 +13,21 @@ import CVIcon from "./icons/CVIcon.astro";
     > y <strong2> desarrollo</strong2>
     ? Puedes descargar mi currículum en el siguiente botón.
   </p>
-  <LinkButton
-    href=`/FernandodelRíoFigueira_CV2024.pdf`
-    download=`/FernandodelRíoFigueira_CV2024.pdf`
-  >
-    <CVIcon class="size-4" />
-    Descargar
-  </LinkButton>
+  <div class="flex justify-start">
+    <LinkButton
+      href="/CV_FernandodelRíoFigueiraEsp.pdf"
+      download="/CV_FernandodelRíoFigueiraEsp.pdf"
+    >
+      <FlagSP class="size-4" />
+      ESP
+    </LinkButton>
+
+    <LinkButton
+      href="/CV_FernandodelRíoFigueiraEng.pdf"
+      download="/CV_FernandodelRíoFigueiraEng.pdf"
+    >
+      <FlagUK class="size-4" />
+      ENG
+    </LinkButton>
+  </div>
 </div>
