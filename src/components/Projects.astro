@@ -1,6 +1,7 @@
 ---
 import UXUI from "./icons/UXUI.astro";
 import Development from "./icons/Development.astro";
+import Graphic from "./icons/Graphic.astro";
 /* import Link from "./icons/Link.astro" */
 import LinkButton from "./LinkButton.astro";
 
@@ -15,6 +16,11 @@ const TAGS = {
     class: "bg-green-500 text-white",
     icon: Development,
   },
+  GRAPHIC: {
+    name: "Graphic",
+    class: "bg-red-500 text-white",
+    icon: Graphic,
+  },
 };
 const PROJECTS = [
   {
@@ -23,7 +29,7 @@ const PROJECTS = [
       "Rediseño del concepto de Moodle estableciendo una interfaz más fresca y una experiencia más agradable.",
     link: "/Moodle2.0",
     image: "/moodle.png",
-    tags: [TAGS.UXUI],
+    tags: [TAGS.GRAPHIC, TAGS.UXUI],
   },
   {
     title: "Portfolio - Diseño y desarrollo de la mano",
@@ -37,52 +43,229 @@ const PROJECTS = [
 ---
 
 <div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(({ image, title, description, tags, link }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-        <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
-            <img
-              alt={title}
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
-              src={image}
-            />
-          </div>
-        </div>
+  <article
+    class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+  >
+    <div class="w-full md:w-1/2">
+      <div
+        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+      >
+        <img
+          alt="Moodle 2.0 - e-Learning redefinido"
+          class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+          loading="lazy"
+          src="/moodle.png"
+        />
+      </div>
+    </div>
 
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
-          <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                  >
-                    <tag.icon class="size-4" />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+    <div class="w-full md:w-1/2 md:max-w-lg">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+        Moodle 2.0 - e-Learning redefinido
+      </h3>
+      <div class="flex flex-wrap mt-2">
+        <ul class="flex flex-row mb-2 gap-x-2">
+          <li>
+            <span
+              class=`flex gap-x-2 rounded-full text-xs bg-red-500 text-white py-1 px-2 `
+            >
+              <Graphic class="size-4" />
+              Gráfico
+            </span>
+          </li>
+          <li>
+            <span
+              class=`flex gap-x-2 rounded-full text-xs bg-yellow-500 text-white py-1 px-2 `
+            >
+              <UXUI class="size-4" />
+              UX/UI
+            </span>
+          </li>
+        </ul>
 
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
-              {description}
-            </div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {link && (
-                <LinkButton href={link}>
-                  {/* <Link class="size-4" /> */}
-                  Ver proyecto
-                </LinkButton>
-              )}
-            </footer>
-          </div>
+        <div class="mt-2 text-gray-700 dark:text-gray-400">
+          Rediseño del concepto de Moodle estableciendo una interfaz más fresca
+          y una experiencia más agradable.
         </div>
-      </article>
-    ))
-  }
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+          <LinkButton href="/Moodle2.0">
+            {/* <Link class="size-4" /> */}
+            Ver proyecto
+          </LinkButton>
+        </footer>
+      </div>
+    </div>
+  </article>
+
+  <article
+    class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+  >
+    <div class="w-full md:w-1/2">
+      <div
+        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+      >
+        <img
+          alt="Portfolio - Diseño y desarrollo de la mano"
+          class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+          loading="lazy"
+          src="portfolioCover.png"
+        />
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 md:max-w-lg">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+        Portfolio - Diseño y desarrollo de la mano
+      </h3>
+      <div class="flex flex-wrap mt-2">
+        <ul class="flex flex-row mb-2 gap-x-2">
+          <li>
+            <span
+              class=`flex gap-x-2 rounded-full text-xs bg-yellow-500 text-white py-1 px-2 `
+            >
+              <UXUI class="size-4" />
+              UX/UI
+            </span>
+          </li>
+          <li>
+            <span
+              class=`flex gap-x-2 rounded-full text-xs bg-green-500 text-white py-1 px-2 `
+            >
+              <Development class="size-4" />
+              Desarrollo
+            </span>
+          </li>
+        </ul>
+
+        <div class="mt-2 text-gray-700 dark:text-gray-400">
+          Proyecto de elaboración de un portfolio personal para mostrar los
+          trabajos que más me representan.
+        </div>
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+          <LinkButton href="">
+            {/* <Link class="size-4" /> */}
+            Ver proyecto
+          </LinkButton>
+        </footer>
+      </div>
+    </div>
+  </article>
+
+  <article
+    class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+  >
+    <div class="w-full md:w-1/2">
+      <div
+        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+      >
+        <!-- <video
+          height=""
+          width="full"
+          class="object-cover object-center w-full h-50 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+          autoplay="true"
+          loop
+          muted
+          poster="/hexagon/logo.png"
+          src="/LogoHexagonAnimated.mp4"></video> -->
+        <img
+          alt="Hexagon Carballo"
+          class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+          loading="lazy"
+          src="/hexagon/hexagonCover.png"
+        />
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 md:max-w-lg">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+        Hexagon - Solo seis lados, pero infinitas experiencias
+      </h3>
+      <div class="flex flex-wrap mt-2">
+        <ul class="flex flex-row mb-2 gap-x-2">
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs bg-red-500 text-white py-1 px-2 `}
+            >
+              <Graphic class="size-4" />
+              Gráfico
+            </span>
+          </li>
+        </ul>
+
+        <div class="mt-2 text-gray-700 dark:text-gray-400">
+          Proyecto de Branding nacido de la colisión entre lo industrial y lo <em
+            class="italic">chic</em
+          >.
+        </div>
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+          <LinkButton href="www.google.com">
+            {/* <Link class="size-4" /> */}
+            Ver proyecto
+          </LinkButton>
+        </footer>
+      </div>
+    </div>
+  </article>
+
+  <article
+    class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+  >
+    <div class="w-full md:w-1/2">
+      <div
+        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+      >
+        <img
+          alt="Restaurandt - ¿Por qué esperar?"
+          class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+          loading="lazy"
+          src="/restaurandt/restaurandtCover.png"
+        />
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 md:max-w-lg">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+        Restaurandt - ¿Por qué esperar?
+      </h3>
+      <div class="flex flex-wrap mt-2">
+        <ul class="flex flex-row mb-2 gap-x-2">
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs bg-red-500 text-white py-1 px-2 `}
+            >
+              <Graphic class="size-4" />
+              Gráfico
+            </span>
+          </li>
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs bg-yellow-500 text-white py-1 px-2 `}
+            >
+              <UXUI class="size-4" />
+              UX/UI
+            </span>
+          </li>
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs bg-green-500 text-white py-1 px-2 `}
+            >
+              <Development class="size-4" />
+              Desarrollo
+            </span>
+          </li>
+        </ul>
+
+        <div class="mt-2 text-gray-700 dark:text-gray-400">
+          Proyecto grupal final de los estudios de Desarrollo Full-Stack.
+          Diseñado en Figma y desarrollado usando React, Node y MongoDB.
+        </div>
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+          <LinkButton href="/UnderConstruction">
+            {/* <Link class="size-4" /> */}
+            Ver proyecto
+          </LinkButton>
+        </footer>
+      </div>
+    </div>
+  </article>
 </div>
