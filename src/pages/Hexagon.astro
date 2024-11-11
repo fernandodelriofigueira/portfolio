@@ -1,0 +1,144 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import SectionContainer from "@/components/SectionContainer.astro";
+import TitleSection from "@/components/TitleSection.astro";
+import PlainText from "@/components/project/plainText.astro";
+import LargeQuote from "@/components/project/largeQuote.astro";
+import TextHeading from "@/components/project/textHeading.astro";
+import LinkInline from "@/components/LinkInline.astro";
+import HexagonHeading from "@/components/project/hexagonHeading.astro";
+---
+
+<Layout
+  title="Fernando del Río Figueira - Portfolio"
+  description="Fernando del Río Figueira. Diseñador Gráfico y UX/UI y Desarrollador Full-Stack"
+>
+  <main class="px-4">
+    <div class="space-y-24 py-16 md:py-36">
+      <SectionContainer id="Hexagon">
+        <HexagonHeading />
+      </SectionContainer>
+
+      <SectionContainer id="contexto">
+        <PlainText>
+          <p>
+            Hexagon fue un concepto creado para un local de ocio nocturno.
+            Durante el proceso de creación de la identidad las necesidades
+            estaban muy claras: "<strong>Necesidad de un cambio</strong>" y
+            poder mostrar una personalidad diferenciadora. Un punto de
+            encuentro, un lugar industrial invadido por la naturaleza. Un
+            híbrido entre un espacio industrial y un ambiente <em class="italic"
+              >chic</em
+            >.
+          </p>
+          <p>
+            Una vez definidas las necesidades, estaba muy clara mi labor:
+            Elaborar una <strong>identidad que acompañe al espacio</strong>, no
+            al revés.
+          </p>
+          <p>
+            Una fuente tipográfica sencilla, <em class="italic">sans serif</em> y
+            con ligeras modificaciones. - Esta ha sido la base para el proyecto.
+            Dicha fuente fue trabajada en matúsculas y en uno de sus pesos más finos,
+            disponiendo las letras para que se solapasen ligeramente, dando la sensación
+            de estar "apiladas unas delante de otras. Finalmente, una pequeña distorsión
+            en la "g" que permite intuír un hexágono completo a partir de una única
+            arista".
+          </p>
+        </PlainText>
+      </SectionContainer>
+      <SectionContainer>
+        <LargeQuote
+          >Una identidad gráfica se basa en un logotipo, pero este no es su
+          único elemento.</LargeQuote
+        ></SectionContainer
+      >
+      <SectionContainer>
+        <p>
+          A parte del logotipo, generé un motivo con el mismo lenguaje gráfico
+          como apoyo a la identidad en ciertas superficies concretas. Este
+          motivo surge de la fragmentación del logotipo y es escalable; es
+          decir, se puede ampliar duplicando el módulo en todas las direcciones.
+        </p>
+      </SectionContainer>
+      <SectionContainer>
+        <div
+          class="flex flex-wrap md:flex-nowrap justify-center items-center gap-4"
+        >
+          <img
+            src="/hexagon/HexSquare.png"
+            alt="Logoitpo Hexagon"
+            class="w-full object-fill md:w-1/2 rounded-lg"
+          />
+          <img
+            src="/hexagon/MotWHex.png"
+            alt="Diccionario Hexagon"
+            class="w-full md:w-1/2 rounded-lg object-cover"
+          />
+        </div>
+        <div
+          class="flex flex-wrap md:flex-nowrap justify-center items-center gap-4 mt-4"
+        >
+          <img
+            src="/hexagon/MotSmall.jpg"
+            alt="Diccionario Hexagon"
+            class="w-full md:w-1/2 rounded-lg"
+          />
+          <img
+            src="/hexagon/DictionaryHex.jpg"
+            alt="Diccionario Hexagon"
+            class="w-full md:w-1/2 rounded-lg"
+          />
+        </div><div
+          class="relative flex mt-4 object-cover flex-col items-center overflow-hidden rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+        >
+          <video
+            height="full"
+            width="full"
+            class="object-cover apect-square"
+            autoplay="true"
+            loop
+            muted
+          >
+            <source
+              src="/hexagon/LogoHexagonAnimated.mp4"
+              type="video/mp4"
+            /></video
+          >
+        </div>
+        <div
+          class="relative flex mt-4 object-cover flex-col items-center overflow-hidden rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+        >
+          <video
+            height="full"
+            width="full"
+            class="object-cover apect-square"
+            autoplay="true"
+            loop
+            muted
+          >
+            <source
+              src="/hexagon/HexagonAnimatedMotiv.mp4"
+              type="video/mp4"
+            /></video
+          >
+        </div>
+      </SectionContainer>
+      <SectionContainer>
+        <TextHeading>
+          <p>
+            Si quieres saber más sobre este proyecto, puedes ponerte en contacto
+            conmigo via <LinkInline href="mailto:f.delrio.figueira@gmail.com"
+              >mail</LinkInline
+            > o <LinkInline
+              class="text-orange-500"
+              href="https://www.linkedin.com/in/fernandodelriofigueira/"
+              >LinkedIn</LinkInline
+            >. Estaré encantado de responder a todas las preguntas.
+          </p>
+        </TextHeading>
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>
