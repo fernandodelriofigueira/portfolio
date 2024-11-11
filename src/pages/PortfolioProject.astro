@@ -12,7 +12,7 @@ import LinkInline from "@/components/LinkInline.astro";
 
 <Layout
   title="Fernando del Río Figueira - Portfolio"
-  description="Fernando del Río Figueira. Diseñador UX/UI y Desarrollador Full-Stack"
+  description="Fernando del Río Figueira. Diseñador Gráfico y UX/UI y Desarrollador Full-Stack"
 >
   <main class="px-4">
     <div class="space-y-24 py-16 md:py-36">
@@ -24,54 +24,47 @@ import LinkInline from "@/components/LinkInline.astro";
         <TitleSection> Contexto </TitleSection>
         <PlainText>
           <p>
-            Este proyecto fue creado como <strong
-              >Trabajo de Fin de Grado</strong
-            > para mis estudios en Diseño Gráfico en 2023. Tenía claro que quería
-            formular una solución para un problema real. De ahí surgió Moodle 2.0,
-            un proyecto que permitiría entender el producto digital de esta empresa
-            como una app de e-Learning al uso.
+            Este proyecto aborda las fases de ideación, diseño y desarrollo de
+            mi propio <strong>portfolio personal</strong>. El objetivo principal
+            es crear un espacio limpio, organizado y actual en el que se puedan
+            mostrar tanto proyectos como contenido complementario. La primera
+            fase consiste en definir una estructura.
           </p>
         </PlainText>
       </SectionContainer>
 
-      <SectionContainer id="problema">
-        <TitleSection> Problema </TitleSection>
+      <SectionContainer id="definición de las necesidades">
+        <TitleSection> Definición de las necesidades </TitleSection>
         <PlainText>
           <p>
-            Moodle, a pesar de ser una de las plataformas de e-learning más
-            populares, presenta serios <strong>problemas de usabilidad</strong>.
-            Su interfaz tradicionalmente ha sido percibida como <strong
-              >compleja y poco intuitiva</strong
-            >, especialmente cuando se utiliza en dispositivos móviles. Los
-            usuarios suelen encontrarse con una experiencia de navegación
-            difícil, fragmentada y, en muchos casos, confusa, lo que afecta
-            tanto a estudiantes como a profesores. Este tipo de fricciones
-            limita su adopción por parte de los centros educativos, quienes
-            necesitan una plataforma más accesible y amigable. Con la creciente
-            demanda de educación a distancia, surge la necesidad de una
-            renovación total que transforme Moodle en una app <strong
-              >moderna, funcional y adaptable</strong
-            > a las necesidades actuales de enseñanza.
+            En mi caso, decidí crear un portfolio en una sola pagina,
+            permitiendo así que los usuanos puedan acceder a todo el contenido
+            con un simple <em class="italic">scroll</em>. En un punto más tardío
+            opté por añadir una explicación mucho mas detallada de cada
+            proyecto, y eso no era compatible con reunir todo el contenido en
+            una sola página.
           </p>
         </PlainText>
       </SectionContainer>
 
-      <SectionContainer id="proscontras">
-        <TitleSection> Identificar pros y contras </TitleSection>
+      <SectionContainer id="Stack tecnológico">
+        <TitleSection> Stack tecnológico </TitleSection>
         <PlainText>
           <p>
-            El primer paso de este proyecto fue identificar los puntos débiles
-            de la interfaz y del flujo en la interacción de los usuarios con el
-            producto. En este punto de la investigación encontré un punto
-            interesante: Su <strong>capacidad de personalización. </strong>Me
-            llamó la atención la cantidad de capas estéticas que se podían
-            añadir a su interfaz.
+            Cuando empecé a idear la forma más ágil de elaborar el portfolio
+            decidí investigar sobre qué <em class="italic">framework</em> resultaría
+            más adecuado para afrontar el proyecto. Me acabé decantando por <LinkInline
+              class="text-yellow-500"
+              href="https://astro.build/">Astro</LinkInline
+            >.
           </p>
           <p>
-            Tras buscar soluciones para este aspecto, la decisión final fue
-            obviar esta funcionalidad, con el fin de ofrecer un producto
-            estéticamente agradable y a la vez actualizado y eficiente, primando
-            ante todo una interacción ágil y fluida.
+            En cuanto a la parte de estilos, para obtener un resultado más
+            unificado decidí implementar <LinkInline
+              class="text-yellow-500"
+              href="https://tailwindcss.com/">TailwindCSS</LinkInline
+            >, un framework similar a Bootstrap que me permitiría aplicar
+            estilos de CSS de forma rápida y unificada en todos los componentes.
           </p>
         </PlainText>
       </SectionContainer>
@@ -81,11 +74,13 @@ import LinkInline from "@/components/LinkInline.astro";
         <div class="flex-wrap">
           <PlainText>
             <p class="w-full">
-              Teniendo en cuenta que se trata de una aplicación de e-learning,
-              se definió como público objetivo el alumnado en general, haciendo
-              foco en los que cursan <strong>estudios superiores</strong>, ya
-              que son los que, por norma general, tienen proyectos y entregas
-              más complejos.
+              Un portfolio tiene una finalidad principal: <strong
+                >mostrar proyectos</strong
+              > de forma clara y concisa. Para ello elegí como usuario modelo a un
+              <em class="italic">recruiter</em> de una empresa tecnológica, con el
+              fin de enfocar el portfolio hacia usuarios que quieren revisar la información
+              rápidamente. Por eso, el foco principal de esta interfaz es mostrar
+              un resumen de los aspectos principales en la página de inicio.
             </p>
           </PlainText>
           <div
@@ -95,7 +90,7 @@ import LinkInline from "@/components/LinkInline.astro";
               alt="user persona"
               class="object-contain object-center w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
-              src="/moodle2.0/UserPersona_Moodle.png"
+              src="/portfolio/UserPersona_Portfolio.jpg"
             />
           </div>
         </div>
@@ -110,79 +105,71 @@ import LinkInline from "@/components/LinkInline.astro";
               alt="Esquema de arquitectura de la información"
               class="object-contain object-center w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
-              src="/moodle2.0/AI_Moodle2.jpg"
+              src="/portfolio/AI_Portfolio.png"
             />
           </div>
           <PlainText>
             <p>
-              A la hora de definir los flujos de navegación se diseñó un esquema
-              para organizar los diferentes menús y comprobar que estos
-              mantienen una estructura lógica.
+              A la hora de definir los flujos de navegación diseñé un esquema
+              para jerarquizar el contenido y establecer un orden dentro de la
+              pantalla principal.
             </p>
             <p>
-              Durante esta fase del proyecto tuve que prestar especial atención
-              a que la navegación fuese lo más rápida posible, ya que la
-              aplicación está destinada a ser usada durante cursos escolares, en
-              los que tanto el alumnado como el profesorado se encontrarían en
-              situaciones de estrés o tensión. Por este motivo, la cantidad de <em
-                class="italic">clicks</em
-              > para navegar por todo el producto debería no ser excesiva, aún coexistiendo
-              con una interfaz limpia y poco recargada.
+              Este esquema mantiene una estructura bastante simple: Por un lado
+              un <strong>menú de navegación</strong> que permite acceder directamente
+              a los apartados principales de la página de inicio y; por otro lado,
+              el contenido en sí.
             </p>
           </PlainText>
         </div>
       </SectionContainer>
       <SectionContainer>
-        <TitleSection> Wireframes </TitleSection>
+        <TitleSection> Estructura </TitleSection>
         <PlainText>
           <p class="w-full">
-            A la hora de definir el <em class="italic">layout</em> de la aplicación,
-            seguí el enfoque de <strong
-              ><em class="italic">Mobile First</em></strong
-            >, definiendo en un primer lugar la distribución de los componentes
-            en los dispositivos de menor tamaño, permitiendo optimizar el
-            espacio en las pantallas más reducidas.
+            El siguiente paso fue la definición del <em class="italic"
+              ><strong>layout</strong></em
+            > del portfolio. Para ello, tomando como referencia el esquema de Arquitectura
+            de la información, elaboré una serie de bocetos sobre cómo querría que
+            se estructurasen todos los contenidos del mismo.
           </p>
         </PlainText>
         <div
           class="relative flex mt-5 w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
         >
           <img
-            alt="Muestra de los wireframes de la aplicación"
+            alt="Portfolio wireframes"
             class="object-contain object-center w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
             loading="lazy"
-            src="/moodle2.0/Esquemas_Moodle.jpg"
+            src="/portfolio/Wireframes_Portfolio.jpg"
           />
         </div>
         <PlainText>
           <p>
-            Una vez definida la versión móvil en columna, pasé a escalar el
-            diseño para pantallas de mayor tamaño o <em class="italic"
-              >Desktop</em
-            >. En este caso, se redistribuyeron los componentes en columna de la
-            versión mobile, manteniendo el lenguaje gráfico pero ampliando
-            márgenes y tamaños tipográficos. Para la versión de escritorio opté
-            por agrupar los elementos en tres módulos: uno central con el
-            contenido más importante y dos laterales, que contienen la
-            información secundaria y algunos accesos directos. Esta distribución
-            permite crear un produto escalable, puesto que con su diseño
-            modular, se pueden añadir componentes en base a las necesidades sin
-            cambiar la estructura general de la aplicación.
+            Estos bocetos o <em class="italic"><strong>wireframes</strong></em> surgieron
+            a partir de una serie de referentes que tomé durante la investigación
+            previa.
           </p>
         </PlainText>
       </SectionContainer>
       <SectionContainer>
-        <TitleSection> Prototipado y testeo </TitleSection>
+        <TitleSection>Desarrollo</TitleSection>
         <PlainText>
           <p>
-            Este proyecto finaliza con la elaboración de un prototipo basado en
-            todo el estudio previo. En el caso de este proyecto, la fase de
-            prototipado se realizó utilizando Adobe XD. En esta última etapa,
-            creé las plantillas para toda la aplicación y definí los componentes
-            que se ubicarían en cada una de las pantallas, dando forma al
-            prototipo de alta fidelidad en sus dos versiones <em class="italic"
-              >mobile</em
-            > y <em class="italic">desktop</em>.
+            El objetivo principal de las primeras fases de desarrollo estaba muy
+            claro: <strong>Llegar al MVP</strong> (Minimum Viable Product)<strong
+            >
+              cuanto antes
+            </strong> con el fin de tener un producto completo en el menor tiempo
+            posible y, posteriormente, añadir mejoras que optimicen la experiencia.
+          </p>
+          <p>
+            Una vez creados todos los componentes, llegó el momento de
+            introducir toda la información necesaria. Para ello, hice una <strong
+              >selección de proyectos</strong
+            > que mostraría en un primer lugar en la pantalla de inicio a modo de
+            resumen, ya que la elaboración de las pestañas específicas con un desglose
+            de los proyectos se realizarían en la siguiente fase.
           </p>
         </PlainText>
         <div
@@ -196,12 +183,9 @@ import LinkInline from "@/components/LinkInline.astro";
             loop
             muted
           >
+            <source src="/portfolio/Video_Portfolio.mp4" type="video/mp4" />
             <source
-              src="/moodle2.0/VideoPrototipoDesktop.mp4"
-              type="video/mp4"
-            />
-            <source
-              src="/moodle2.0/VideoPrototipoDesktop.webm"
+              src="/moodle2.0/Video_Portfolio.webm"
               type="video/webm"
             /></video
           >
