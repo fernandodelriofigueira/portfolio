@@ -61,7 +61,7 @@ import LinkInline from "@/components/LinkInline.astro";
       </SectionContainer>
 
       <SectionContainer id="proscontras">
-        <TitleSection> Identificar pros y contras </TitleSection>
+        <TitleSection> Balance </TitleSection>
         <PlainText>
           <p
             class="dark:[&>strong]:text-orange-500 [&>strong]:text-orange-500 [&>strong]:font-medium"
@@ -91,8 +91,8 @@ import LinkInline from "@/components/LinkInline.astro";
             >
               Teniendo en cuenta que se trata de una aplicación de e-learning,
               se definió como público objetivo el alumnado en general, haciendo
-              foco en los que cursan <strong>estudios superiores</strong>, ya
-              que son los que, por norma general, tienen proyectos y entregas
+              foco en aquellos que cursan <strong>estudios superiores</strong>,
+              ya que son los que, por norma general, tienen proyectos y entregas
               más complejos.
             </p>
           </PlainText>
@@ -106,6 +106,35 @@ import LinkInline from "@/components/LinkInline.astro";
               src="/moodle2.0/UserPersona_Moodle.png"
             />
           </div>
+        </div>
+      </SectionContainer>
+      <SectionContainer>
+        <TitleSection> Card Sorting </TitleSection>
+        <div class="flex-wrap content-center">
+          <div
+            class="relative flex mt-5 w-auto h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+          >
+            <img
+              alt="Esquema de arquitectura de la información"
+              class="object-contain object-center w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src="/moodle2.0/CardSorting_Moodle.png"
+            />
+          </div>
+          <PlainText>
+            <p>
+              Con el fin de estrucutrar y <strong>agrupar</strong> correctamente
+              el <strong>contenido de la aplicación</strong>, realicé una sesión
+              de <em class="italic">Card Sorting</em> con una muestra de usuarios.
+            </p>
+            <p>
+              Esta sesión me permitió obtener una <strong
+                >perspectiva diferente</strong
+              > sobre cómo se debería agrupar el contenido principal de esta app.
+              Una vez obtenidos estos datos, llegó el momento de definir la Arquitectura
+              de la Información.
+            </p>
+          </PlainText>
         </div>
       </SectionContainer>
       <SectionContainer>
