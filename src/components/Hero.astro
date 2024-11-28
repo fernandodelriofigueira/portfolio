@@ -4,15 +4,12 @@ const personalImageAlt = "Fernando del Río Figueira";
 import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
+import Logo from "./icons/Logo.astro";
 ---
 
 <div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src=`/FotoPerfil.webp`
-      alt={personalImageAlt}
-    />
+  <div class="flex gap-4 mb-6">
+    <Logo class="size-12" />
     <a
       href="https://linkedin.com/in/fernandodelriofigueira"
       target="_blank"
@@ -24,10 +21,10 @@ import SocialPill from "@/components/SocialPill.astro";
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    ¡Hola! Soy Fernando
+    Fernando del Río Figueira
   </h1>
   <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 dark:[&>strong2]:text-green-500 [&>strong2]:text-green-500 [&>strong2]:font-semibold dark:text-gray-300"
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 dark:[&>strong2]:text-green-500 [&>strong2]:text-green-500 [&>strong2]:font-semibold dark:text-gray-100"
   >
     <strong>Diseñador Gráfico y UX/UI</strong>
     y <strong2> Desarrollador Full-Stack</strong2>
