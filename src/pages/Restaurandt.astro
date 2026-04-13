@@ -1,0 +1,289 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import SectionContainer from "@/components/SectionContainer.astro";
+import TitleSection from "@/components/TitleSection.astro";
+import restaurandtHeading from "@/components/project/restaurandtHeading.astro";
+import PlainText from "@/components/project/plainText.astro";
+import LargeQuote from "@/components/project/largeQuote.astro";
+import TextHeading from "@/components/project/textHeading.astro";
+import LinkInline from "@/components/LinkInline.astro";
+---
+
+<Layout
+  title="Fernando del Río Figueira - Portfolio"
+  description="Fernando del Río Figueira. Diseñador Gráfico y UX/UI y Desarrollador Full-Stack"
+>
+  <main class="px-4">
+    <div class="space-y-24 py-16 md:py-36">
+      <SectionContainer id="Restaurandt">
+        <restaurandtHeading></restaurandtHeading>
+      </SectionContainer>
+
+      <SectionContainer id="contexto">
+        <TitleSection>Contexto</TitleSection>
+        <PlainText>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            Restaurandt nació como <strong
+              >proyecto final del Bootcamp de Desarrollo Full-Stack</strong
+            > de Upgrade Hub, desarrollado por un equipo de seis personas. El reto
+            era claro: diseñar y construir desde cero una aplicación funcional que
+            demostrase el dominio de todo el stack tecnológico aprendido durante
+            el curso, desde el frontend en <strong>React</strong> hasta el backend
+            con <strong>Node y MongoDB</strong>.
+          </p>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            Dado que el foco del proyecto era técnico, la fase de diseño se
+            planteó de forma deliberadamente estratégica: flujos simples,
+            interfaz limpia y decisiones visuales que facilitasen la
+            implementación por parte del equipo de desarrollo. No se trataba de
+            reducir la ambición del producto, sino de <strong
+              >priorizar la solidez funcional</strong
+            > sobre la complejidad estética.
+          </p>
+        </PlainText>
+      </SectionContainer>
+
+      <SectionContainer id="problema">
+        <TitleSection>El problema</TitleSection>
+        <PlainText>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            Comer fuera en un descanso laboral corto puede convertirse en una
+            experiencia frustrante. Esperar a ser atendido, pedir, esperar la
+            comida y pagar en un tiempo limitado hace que muchas personas
+            renuncien a disfrutar de un restaurante. Restaurandt responde a esa
+            necesidad: <strong
+              >reservar mesa y encargar la comida con antelación</strong
+            >, para llegar al local con todo preparado y aprovechar el tiempo al
+            máximo.
+          </p>
+        </PlainText>
+      </SectionContainer>
+
+      <SectionContainer id="user-persona">
+        <TitleSection>User Persona</TitleSection>
+        <PlainText>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            Para acotar el diseño, definimos un perfil de usuario principal que
+            guiase las decisiones del equipo.
+          </p>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            <strong
+              >Laura, 31 años. Técnica de marketing en una empresa del centro de
+              Madrid.</strong
+            >
+          </p>
+          <p>
+            Laura trabaja en jornada partida y dispone de 45 minutos para comer.
+            Le gusta salir del despacho y comer en un restaurante cercano, pero
+            la mayoría de los días acaba recurriendo al menú del bar de siempre
+            porque el tiempo se le va en esperas. Es usuaria habitual de apps de
+            delivery, pero preferiría comer sentada en un local si el proceso
+            fuese más ágil. Valora la inmediatez, la claridad y no tener que
+            lidiar con interfaces confusas cuando lleva ya cinco horas delante
+            del ordenador.
+          </p>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            Laura no es la única. Detrás de ella hay un perfil amplio de
+            usuarios que comparten la misma fricción: <strong
+              >el tiempo es el recurso más escaso</strong
+            >, y la experiencia en restaurantes no siempre lo respeta.
+          </p>
+        </PlainText>
+      </SectionContainer>
+
+      <SectionContainer id="identidad">
+        <TitleSection>Identidad de marca</TitleSection>
+        <PlainText>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            La identidad visual fue diseñada íntegramente por mí. El nombre <em
+              class="italic">Restaurandt</em
+            > —con la <em class="italic">d</em> y la <em class="italic">t</em> separadas
+            por el símbolo <em class="italic">&</em>— da lugar a un logotipo con
+            carácter propio, donde el ampersand actúa como elemento
+            diferenciador y aporta dinamismo a la marca. Se adoptó un <strong
+              >rojo intenso</strong
+            > como color principal, evocando la energía, el apetito y la inmediatez
+            que definen la propuesta de valor del producto.
+          </p>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            La versión reducida del logo, <strong>R&T</strong>, garantiza su
+            legibilidad en la versión móvil sin perder reconocibilidad. El
+            resultado es una identidad que transmite confianza, modernidad y un
+            punto de carácter.
+          </p>
+        </PlainText>
+      </SectionContainer>
+
+      <SectionContainer id="flujos">
+        <TitleSection>Flujos de navegación</TitleSection>
+        <PlainText>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            Antes de pasar a Figma, el equipo dedicó tiempo a definir y validar
+            internamente los <strong>flujos principales de la aplicación</strong
+            >, con el objetivo de asegurarse de que cada pantalla tuviese un
+            propósito claro y que ningún paso fuese superfluo.
+          </p>
+          <p>
+            Se identificaron tres flujos críticos sobre los que pivotaría todo
+            el desarrollo:
+          </p>
+          <ul class="list-disc list-inside space-y-1">
+            <li>
+              <strong class="text-yellow-500 font-medium">Onboarding:</strong> registro
+              e inicio de sesión, con acceso vía Google para minimizar la fricción.
+            </li>
+            <li>
+              <strong class="text-yellow-500 font-medium"
+                >Descubrimiento:</strong
+              > búsqueda y selección de restaurante desde el listado principal.
+            </li>
+            <li>
+              <strong class="text-yellow-500 font-medium"
+                >Reserva y pedido:</strong
+              > selección de platos, confirmación de mesa y hora de llegada.
+            </li>
+          </ul>
+          <p>
+            Esta definición previa fue clave para que diseño y desarrollo
+            hablasen el mismo idioma desde el primer día, evitando retrabajos y
+            manteniendo el ritmo del equipo durante todo el sprint.
+          </p>
+        </PlainText>
+      </SectionContainer>
+
+      <SectionContainer id="diseno">
+        <TitleSection>Diseño de la interfaz</TitleSection>
+        <PlainText>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            La interfaz se diseñó en <strong>Figma</strong>, siguiendo un
+            enfoque orientado a la claridad y a la facilidad de implementación.
+            Cada pantalla fue pensada para cubrir los flujos principales con el
+            menor número de pasos posible.
+          </p>
+          <p>
+            El sistema de tarjetas con bordes redondeados, el uso consistente
+            del rojo como color de acción y la jerarquía tipográfica clara hacen
+            que la interfaz sea <strong class="text-yellow-500 font-medium"
+              >intuitiva desde el primer uso</strong
+            >, sin necesidad de instrucciones. La versión mobile adapta la
+            experiencia con un layout en columna y botones de acción flotantes,
+            manteniendo la coherencia visual con la versión desktop.
+          </p>
+        </PlainText>
+        <div
+          class="relative flex mt-5 w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+        >
+          <img
+            alt="Desktop home de Restaurandt"
+            class="object-contain object-center w-full h-full transition duration-500 sm:h-full"
+            loading="lazy"
+            src="/restaurandt/desktopHome.jpg"
+          />
+        </div>
+        <div
+          class="relative flex mt-5 w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+        >
+          <img
+            alt="Vista de restaurante en Restaurandt"
+            class="object-contain object-center w-full h-full transition duration-500 sm:h-full"
+            loading="lazy"
+            src="/restaurandt/desktopRestaurant.jpg"
+          />
+        </div>
+        <div
+          class="relative flex mt-5 w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl"
+        >
+          <img
+            alt="Vista mobile de Restaurandt"
+            class="object-contain object-center w-full h-full transition duration-500 sm:h-full"
+            loading="lazy"
+            src="/restaurandt/Frame.jpg"
+          />
+        </div>
+      </SectionContainer>
+
+      <SectionContainer id="desarrollo">
+        <TitleSection>Desarrollo</TitleSection>
+        <PlainText>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            El equipo implementó la aplicación utilizando <strong>React</strong>
+            en el frontend, <strong>Node.js</strong> con Express en el backend y
+            <strong>MongoDB</strong> como base de datos. La apuesta por flujos simples
+            y bien definidos desde el diseño se tradujo en una implementación ágil,
+            permitiendo al equipo completar con éxito todos los flujos principales:
+            registro, búsqueda de restaurantes, reserva de mesa y pedido anticipado.
+          </p>
+          <p>
+            El hecho de no sobrecargar el diseño con funcionalidades secundarias
+            fue una decisión que el equipo valoró muy positivamente, ya que
+            permitió mantener el foco en la calidad del código y en la robustez
+            de cada flujo.
+          </p>
+        </PlainText>
+      </SectionContainer>
+
+      <SectionContainer id="conclusiones">
+        <TitleSection>Conclusiones</TitleSection>
+        <PlainText>
+          <p
+            class="dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-medium"
+          >
+            Restaurandt fue uno de los proyectos que <strong
+              >mejor recepción tuvo</strong
+            > entre los presentados en la edición del bootcamp, destacando tanto
+            por la coherencia entre diseño y desarrollo como por la utilidad real
+            de la solución planteada. Demostró que con un equipo multidisciplinar,
+            una buena definición del problema y decisiones de diseño conscientes,
+            es posible entregar un producto <strong
+              >sólido, funcional y visualmente atractivo</strong
+            > en un tiempo muy reducido.
+          </p>
+          <p>
+            El proyecto puso de manifiesto la importancia de que el diseño y el
+            desarrollo trabajen desde el principio con los mismos objetivos, y
+            supuso una prueba de que la simplicidad, bien ejecutada, es en sí
+            misma una decisión de diseño de alto valor.
+          </p>
+        </PlainText>
+      </SectionContainer>
+
+      <SectionContainer>
+        <TextHeading>
+          <p>
+            Si quieres saber más sobre este proyecto, puedes ponerte en contacto
+            conmigo via <LinkInline href="mailto:f.delrio.figueira@gmail.com"
+              >mail</LinkInline
+            > o <LinkInline
+              class="text-orange-500"
+              href="https://www.linkedin.com/in/fernandodelriofigueira/"
+              >LinkedIn</LinkInline
+            >. Estaré encantado de responder a todas las preguntas.
+          </p>
+        </TextHeading>
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>
